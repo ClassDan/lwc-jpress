@@ -1,0 +1,276 @@
+#@layout()
+
+#define content()
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>
+            模板设置
+            <small>Template Setting</small>
+        </h1>
+    </section>
+
+    <section class="content">
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="nav-tabs-custom">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#logo" data-toggle="tab" aria-expanded="true">Logo</a></li>
+                        <li class=""><a href="#slide" data-toggle="tab" aria-expanded="false">轮播图</a></li>
+                        <li class=""><a href="#footer-top" data-toggle="tab" aria-expanded="false">Footer-Top</a></li>
+                        <li class=""><a href="#footer-bottom" data-toggle="tab" aria-expanded="false">Footer-Bottom</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <form id="optionForm" class="form-horizontal form-setting" autocomplete="off">
+                            <div class="tab-pane active" id="logo">
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">标题</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="title" placeholder="网站标题">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">Logo</label>
+                                    <div class="col-sm-6">
+                                        <button type="button"
+                                                for-src="img"
+                                                for-input="imginput"
+                                                class="btn-image-browser btn btn-flat btn-default btn-xs">
+                                            <i class="fa fa-fw fa-image"></i> 选择图片
+                                        </button>
+                                        <br/>
+                                        <img src="#(CPATH)#option('bonhumeur_web_avatar','/static/commons/img/avatar.png')"
+                                             id="img">
+                                        <input type="hidden" id="imginput" name="bonhumeur_web_avatar"
+                                               value="#option('bonhumeur_web_avatar')">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.tab-pane -->
+
+                            <div class="tab-pane" id="slide">
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">首页幻灯片</label>
+                                    <div class="col-sm-6">
+                                        <textarea rows="5" class="form-control" placeholder="幻灯片地址..."
+                                                  name="homepage_slides"></textarea>
+                                        <p class="help-block"> 一行一条数据</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.tab-pane -->
+
+                            <div class="tab-pane" id="footer-top">
+                                <form class="form-horizontal form-setting" autocomplete="off">
+                                    <h4 class="page-header">第一列</h4>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">标题</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" id="footer.column1.title"
+                                                   placeholder="标题">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">链接1</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" id="footer.column1.link1"
+                                                   placeholder="链接1">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">链接2</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" id="footer.column1.link2"
+                                                   placeholder="链接2">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">链接3</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" id="footer.column1.link3"
+                                                   placeholder="链接3">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">链接4</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" id="footer.column1.link4"
+                                                   placeholder="链接4">
+                                        </div>
+                                    </div>
+
+                                    <h4 class="page-header">第二列</h4>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">标题</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" id="footer.column2.title"
+                                                   placeholder="标题">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">链接1</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" id="footer.column2.link1"
+                                                   placeholder="链接1">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">链接2</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" id="footer.column2.link2"
+                                                   placeholder="链接2">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">链接3</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" id="footer.column2.link3"
+                                                   placeholder="链接3">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">链接4</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" id="footer.column2.link4"
+                                                   placeholder="链接4">
+                                        </div>
+                                    </div>
+
+                                    <h4 class="page-header">第三列</h4>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">标题</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" id="footer.column3.title"
+                                                   placeholder="标题">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">链接1</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" id="footer.column3.link1"
+                                                   placeholder="链接1">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">链接2</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" id="footer.column3.link2"
+                                                   placeholder="链接2">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">链接3</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" id="footer.column3.link3"
+                                                   placeholder="链接3">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">链接4</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" id="footer.column3.link4"
+                                                   placeholder="链接4">
+                                        </div>
+                                    </div>
+
+                                    <h4 class="page-header">第四列</h4>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">标题</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" id="footer.column4.title"
+                                                   placeholder="标题">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">链接1</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" id="footer.column4.link1"
+                                                   placeholder="链接1">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">链接2</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" id="footer.column4.link2"
+                                                   placeholder="链接2">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">链接3</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" id="footer.column4.link3"
+                                                   placeholder="链接3">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">链接4</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" id="footer.column4.link4"
+                                                   placeholder="链接4">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- /.tab-pane -->
+
+                            <div class="tab-pane" id="footer-bottom">
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">公司英文名</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="company.english"
+                                               placeholder="公司英文名">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">公司中文名</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="company.chinese"
+                                               placeholder="公司中文名">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">ICP备案</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="company.icp.record"
+                                               placeholder="ICP备案号">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">网安备案</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="company.police.record"
+                                               placeholder="网安备案号">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">网安备案链接</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="company.police.record.link"
+                                               placeholder="网安备案链接">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.tab-pane -->
+
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10 submit-block">
+                                    <div class="box-submit">
+                                        <button type="submit" class="btn btn-primary">保存</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- /.tab-pane -->
+                    </div>
+                    <!-- /.tab-content -->
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</div>
+#end

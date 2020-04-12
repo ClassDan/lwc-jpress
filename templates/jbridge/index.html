@@ -1,0 +1,619 @@
+#include("./layout.html")
+#@layout()
+
+#define css()
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+<style type="text/css">
+    .swiper-container {
+        height: 420px;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    .slider_text {
+        color: #FFF;
+    }
+
+    .slider_title {
+        font-size: 60px;
+        font-weight: 600;
+    }
+
+    .slider_btn {
+        font-size: 16px;
+        line-height: 39px;
+        letter-spacing: 1px;
+        height: 39px;
+        width: auto;
+        padding-left: 23px;
+        padding-right: 23px;
+    }
+</style>
+#end
+
+#define script()
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        spaceBetween: 30,
+        effect: 'fade',
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+        }
+    });
+</script>
+#end
+
+#define content()
+<!-- Content Area -->
+<div class="content content_top_margin_none has_slider">
+    <div class="content_inner no_animation ">
+        <!-- Slider Area -->
+        <div class="q_slider">
+            <div class="q_slider_inner">
+                <!-- Swiper -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        #for(slide : linesOption('homepage_slides','\|'))
+                        <div class="swiper-slide"
+                             style="background-image:url('#(slide[0])');">
+                            <span class="slider_text slider_title">#(slide[1])</span>
+                            <a itemprop="url" class="qbutton green enlarge slider_btn"
+                               href="#(slide[2])">#(slide[3])</a>
+                        </div>
+                        #end
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination swiper-pagination-white"></div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next swiper-button-white"></div>
+                    <div class="swiper-button-prev swiper-button-white"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Description Area -->
+        <div class="full_width">
+            <div class="full_width_inner">
+                <div class="vc_row wpb_row section vc_row-fluid  grid_section"
+                     style='background-color:#ffffff; padding-top:70px; padding-bottom:24px; text-align:left;'>
+                    <div class=" section_inner clearfix">
+                        <div class='section_inner_margin clearfix'>
+                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                <div class="vc_column-inner">
+                                    <div class="wpb_wrapper">
+                                        <div class="wpb_text_column wpb_content_element ">
+                                            <div class="wpb_wrapper">
+                                                <h2 style="text-align: center;">iSlide是一款基于PowerPoint的插件工具</h2>
+
+                                            </div>
+                                        </div>
+                                        <div class="separator  transparent   " style="margin-top: 0px;"></div>
+
+                                        <div class="wpb_text_column wpb_content_element ">
+                                            <div class="wpb_wrapper">
+                                                <h4 style="text-align: center;">
+                                                    包含38个设计辅助功能，8大在线资源库超20万专业PPT模板/素材</h4>
+
+                                            </div>
+                                        </div>
+                                        <div class="separator  transparent   "
+                                             style="margin-top: 20px;margin-bottom: 20px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vc_row wpb_row section vc_row-fluid  grid_section"
+                     style='background-color:#ffffff; padding-bottom:0px; text-align:center;'>
+                    <div class=" section_inner clearfix">
+                        <div class='section_inner_margin clearfix'>
+                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                <div class="vc_column-inner">
+                                    <div class="wpb_wrapper">
+                                        <div class="separator  normal   "
+                                             style="background-color: #ffffff;height: 1px;"></div>
+
+                                        <div class="wpb_single_image wpb_content_element vc_align_center">
+                                            <div class="wpb_wrapper">
+
+                                                <div class="vc_single_image-wrapper   vc_box_border_grey"><img
+                                                        width="1200" height="351"
+                                                        src="https://www.islide.cc/wp-content/uploads/2019/05/home02.jpg"
+                                                        class="vc_single_image-img attachment-full" alt="ppt模板"
+                                                        srcset="https://www.islide.cc/wp-content/uploads/2019/05/home02.jpg 1200w, https://www.islide.cc/wp-content/uploads/2019/05/home02-300x88.jpg 300w, https://www.islide.cc/wp-content/uploads/2019/05/home02-768x225.jpg 768w, https://www.islide.cc/wp-content/uploads/2019/05/home02-1024x300.jpg 1024w, https://www.islide.cc/wp-content/uploads/2019/05/home02-700x205.jpg 700w"
+                                                        sizes="(max-width: 1200px) 100vw, 1200px"/></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vc_row wpb_row section vc_row-fluid  image_to_bottom grid_section"
+                     style='background-color:#f3f7fa; padding-top:50px; padding-bottom:50px; text-align:center;'>
+                    <div class=" section_inner clearfix">
+                        <div class='section_inner_margin clearfix'>
+                            <div class="wpb_column vc_column_container vc_col-sm-8">
+                                <div class="vc_column-inner">
+                                    <div class="wpb_wrapper">
+                                        <div class="wpb_single_image wpb_content_element vc_align_center">
+                                            <div class="wpb_wrapper">
+
+                                                <div class="vc_single_image-wrapper   vc_box_border_grey"><img
+                                                        width="1000" height="678"
+                                                        src="https://www.islide.cc/wp-content/uploads/2018/02/home1.gif"
+                                                        class="vc_single_image-img attachment-large" alt=""/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wpb_column vc_column_container vc_col-sm-4">
+                                <div class="vc_column-inner vc_custom_1479902480952">
+                                    <div class="wpb_wrapper">
+                                        <div class="separator  transparent   " style="margin-top: 150px;"></div>
+
+                                        <div class="wpb_text_column wpb_content_element  vc_custom_1558788006093">
+                                            <div class="wpb_wrapper">
+                                                <h2 style="text-align: left;">内置200,000+ PPT模板</h2>
+
+                                            </div>
+                                        </div>
+                                        <div class="separator  transparent   " style="margin-top: 5px;"></div>
+
+                                        <div class="wpb_text_column wpb_content_element ">
+                                            <div class="wpb_wrapper">
+                                                <h4 style="text-align: left;">资源持续更新，
+                                                    快速检索，一键插入PPT，不必再为找素材而苦恼！</h4>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vc_row wpb_row section vc_row-fluid  image_to_bottom grid_section"
+                     style='background-color:#ffffff; padding-top:50px; padding-bottom:50px; text-align:center;'>
+                    <div class=" section_inner clearfix">
+                        <div class='section_inner_margin clearfix'>
+                            <div class="wpb_column vc_column_container vc_col-sm-4">
+                                <div class="vc_column-inner">
+                                    <div class="wpb_wrapper">
+                                        <div class="separator  transparent   " style="margin-top: 150px;"></div>
+
+                                        <div class="wpb_text_column wpb_content_element  vc_custom_1517552670760">
+                                            <div class="wpb_wrapper">
+                                                <h2 style="text-align: left;">更富有吸引力的PPT图表</h2>
+
+                                            </div>
+                                        </div>
+                                        <div class="separator  transparent   " style="margin-top: 5px;"></div>
+
+                                        <div class="wpb_text_column wpb_content_element ">
+                                            <div class="wpb_wrapper">
+                                                <h4 style="text-align: left;">各种参数化调节，iSlide智能图表让数据变得直观易懂！</h4>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wpb_column vc_column_container vc_col-sm-8">
+                                <div class="vc_column-inner vc_custom_1479902480952">
+                                    <div class="wpb_wrapper">
+                                        <div class="wpb_single_image wpb_content_element vc_align_center">
+                                            <div class="wpb_wrapper">
+
+                                                <div class="vc_single_image-wrapper   vc_box_border_grey"><img
+                                                        width="1000" height="678"
+                                                        src="https://www.islide.cc/wp-content/uploads/2018/02/图表.gif"
+                                                        class="vc_single_image-img attachment-large" alt=""/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vc_row wpb_row section vc_row-fluid  image_to_bottom grid_section"
+                     style='background-color:#f3f7fa; padding-top:50px; padding-bottom:50px; text-align:center;'>
+                    <div class=" section_inner clearfix">
+                        <div class='section_inner_margin clearfix'>
+                            <div class="wpb_column vc_column_container vc_col-sm-8">
+                                <div class="vc_column-inner">
+                                    <div class="wpb_wrapper">
+                                        <div class="wpb_single_image wpb_content_element vc_align_center">
+                                            <div class="wpb_wrapper">
+
+                                                <div class="vc_single_image-wrapper   vc_box_border_grey"><img
+                                                        width="1000" height="678"
+                                                        src="https://www.islide.cc/wp-content/uploads/2018/02/home3.png"
+                                                        class="vc_single_image-img attachment-large" alt=""
+                                                        srcset="https://www.islide.cc/wp-content/uploads/2018/02/home3.png 1000w, https://www.islide.cc/wp-content/uploads/2018/02/home3-300x203.png 300w, https://www.islide.cc/wp-content/uploads/2018/02/home3-768x521.png 768w, https://www.islide.cc/wp-content/uploads/2018/02/home3-700x475.png 700w"
+                                                        sizes="(max-width: 1000px) 100vw, 1000px"/></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wpb_column vc_column_container vc_col-sm-4">
+                                <div class="vc_column-inner vc_custom_1479902480952">
+                                    <div class="wpb_wrapper">
+                                        <div class="separator  transparent   " style="margin-top: 130px;"></div>
+
+                                        <div class="wpb_text_column wpb_content_element  vc_custom_1517553331934">
+                                            <div class="wpb_wrapper">
+                                                <h2 style="text-align: left;">三步搞定PPT设计</h2>
+
+                                            </div>
+                                        </div>
+                                        <div class="separator  transparent   " style="margin-top: 5px;"></div>
+
+                                        <div class="wpb_text_column wpb_content_element ">
+                                            <div class="wpb_wrapper">
+                                                <h4 style="text-align: left;">➀选择主题——➁插入图示——➂添加文本</h4>
+                                                <h4 style="text-align: left;">
+                                                    自由组合各种库资源素材，更多“一键化”功能让PPT变得简单起来！</h4>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vc_row wpb_row section vc_row-fluid  grid_section"
+                     style=' padding-top:60px; padding-bottom:62px; text-align:left;'>
+                    <div class=" section_inner clearfix">
+                        <div class='section_inner_margin clearfix'>
+                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                <div class="vc_column-inner">
+                                    <div class="wpb_wrapper">
+                                        <div class="wpb_text_column wpb_content_element  vc_custom_1558788118035">
+                                            <div class="wpb_wrapper">
+                                                <h2 style="text-align: center;">即便不懂设计，也能高效的创建各类专业PPT</h2>
+
+                                            </div>
+                                        </div>
+                                        <div class="separator  transparent   " style="margin-top: 0px;"></div>
+
+                                        <div class="wpb_text_column wpb_content_element ">
+                                            <div class="wpb_wrapper">
+                                                <h4 style="text-align: center;">百万用户的共同选择，开始做出改变吧！</h4>
+
+                                            </div>
+                                        </div>
+                                        <div class="separator  transparent   " style="margin-top: 40px;"></div>
+                                        <div class="wpb_gallery wpb_content_element vc_clearfix">
+                                            <div class="wpb_wrapper">
+                                                <div class="wpb_gallery_slides wpb_image_grid"
+                                                     data-interval="3">
+                                                    <div class="gallery_holder">
+                                                        <ul class="gallery_inner gallery_with_space  v3">
+                                                            <li class="no_grayscale"><img width="1000"
+                                                                                          height="563"
+                                                                                          src="https://www.islide.cc/wp-content/uploads/2017/02/90后样机图.jpg"
+                                                                                          class="attachment-full"
+                                                                                          alt=""
+                                                                                          srcset="https://www.islide.cc/wp-content/uploads/2017/02/90后样机图.jpg 1000w, https://www.islide.cc/wp-content/uploads/2017/02/90后样机图-300x169.jpg 300w, https://www.islide.cc/wp-content/uploads/2017/02/90后样机图-768x432.jpg 768w, https://www.islide.cc/wp-content/uploads/2017/02/90后样机图-700x394.jpg 700w, https://www.islide.cc/wp-content/uploads/2017/02/90后样机图-539x303.jpg 539w"
+                                                                                          sizes="(max-width: 1000px) 100vw, 1000px"/>
+                                                            </li>
+                                                            <li class="no_grayscale"><img width="1000"
+                                                                                          height="563"
+                                                                                          src="https://www.islide.cc/wp-content/uploads/2013/10/移动吞噬-6.jpg"
+                                                                                          class="attachment-full"
+                                                                                          alt=""
+                                                                                          srcset="https://www.islide.cc/wp-content/uploads/2013/10/移动吞噬-6.jpg 1000w, https://www.islide.cc/wp-content/uploads/2013/10/移动吞噬-6-300x169.jpg 300w, https://www.islide.cc/wp-content/uploads/2013/10/移动吞噬-6-768x432.jpg 768w, https://www.islide.cc/wp-content/uploads/2013/10/移动吞噬-6-700x394.jpg 700w, https://www.islide.cc/wp-content/uploads/2013/10/移动吞噬-6-539x303.jpg 539w"
+                                                                                          sizes="(max-width: 1000px) 100vw, 1000px"/>
+                                                            </li>
+                                                            <li class="no_grayscale"><img width="1000"
+                                                                                          height="563"
+                                                                                          src="https://www.islide.cc/wp-content/uploads/2013/10/case-34.jpg"
+                                                                                          class="attachment-full"
+                                                                                          alt=""
+                                                                                          srcset="https://www.islide.cc/wp-content/uploads/2013/10/case-34.jpg 1000w, https://www.islide.cc/wp-content/uploads/2013/10/case-34-300x169.jpg 300w, https://www.islide.cc/wp-content/uploads/2013/10/case-34-768x432.jpg 768w, https://www.islide.cc/wp-content/uploads/2013/10/case-34-700x394.jpg 700w, https://www.islide.cc/wp-content/uploads/2013/10/case-34-539x303.jpg 539w"
+                                                                                          sizes="(max-width: 1000px) 100vw, 1000px"/>
+                                                            </li>
+                                                            <li class="no_grayscale"><img width="1000"
+                                                                                          height="563"
+                                                                                          src="https://www.islide.cc/wp-content/uploads/2018/06/情绪样机图.jpg"
+                                                                                          class="attachment-full"
+                                                                                          alt=""
+                                                                                          srcset="https://www.islide.cc/wp-content/uploads/2018/06/情绪样机图.jpg 1000w, https://www.islide.cc/wp-content/uploads/2018/06/情绪样机图-300x169.jpg 300w, https://www.islide.cc/wp-content/uploads/2018/06/情绪样机图-768x432.jpg 768w, https://www.islide.cc/wp-content/uploads/2018/06/情绪样机图-700x394.jpg 700w, https://www.islide.cc/wp-content/uploads/2018/06/情绪样机图-539x303.jpg 539w"
+                                                                                          sizes="(max-width: 1000px) 100vw, 1000px"/>
+                                                            </li>
+                                                            <li class="no_grayscale"><img width="1000"
+                                                                                          height="562"
+                                                                                          src="https://www.islide.cc/wp-content/uploads/2017/02/【设计稿】你不可不知的全球财富数字——写给在2017打拼的自己！-6.jpg"
+                                                                                          class="attachment-full"
+                                                                                          alt=""
+                                                                                          srcset="https://www.islide.cc/wp-content/uploads/2017/02/【设计稿】你不可不知的全球财富数字——写给在2017打拼的自己！-6.jpg 1000w, https://www.islide.cc/wp-content/uploads/2017/02/【设计稿】你不可不知的全球财富数字——写给在2017打拼的自己！-6-300x169.jpg 300w, https://www.islide.cc/wp-content/uploads/2017/02/【设计稿】你不可不知的全球财富数字——写给在2017打拼的自己！-6-768x432.jpg 768w, https://www.islide.cc/wp-content/uploads/2017/02/【设计稿】你不可不知的全球财富数字——写给在2017打拼的自己！-6-700x393.jpg 700w, https://www.islide.cc/wp-content/uploads/2017/02/【设计稿】你不可不知的全球财富数字——写给在2017打拼的自己！-6-539x303.jpg 539w"
+                                                                                          sizes="(max-width: 1000px) 100vw, 1000px"/>
+                                                            </li>
+                                                            <li class="no_grayscale"><img width="1000"
+                                                                                          height="563"
+                                                                                          src="https://www.islide.cc/wp-content/uploads/2018/02/case-34.jpg"
+                                                                                          class="attachment-full"
+                                                                                          alt=""
+                                                                                          srcset="https://www.islide.cc/wp-content/uploads/2018/02/case-34.jpg 1000w, https://www.islide.cc/wp-content/uploads/2018/02/case-34-300x169.jpg 300w, https://www.islide.cc/wp-content/uploads/2018/02/case-34-768x432.jpg 768w, https://www.islide.cc/wp-content/uploads/2018/02/case-34-700x394.jpg 700w, https://www.islide.cc/wp-content/uploads/2018/02/case-34-539x303.jpg 539w"
+                                                                                          sizes="(max-width: 1000px) 100vw, 1000px"/>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="separator  transparent   " style="margin-top: 40px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section data-speed="1" class="parallax_section_holder  "
+                         style=" height:px; background-image:url('');">
+                    <div class="parallax_content left">
+                        <div class='parallax_section_inner_margin clearfix'>
+                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                <div class="vc_column-inner">
+                                    <div class="wpb_wrapper">
+                                        <div class='testimonials_holder clearfix dark'>
+                                            <div class="testimonials testimonials_carousel"
+                                                 data-show-navigation="yes" data-animation-type="slide"
+                                                 data-animation-speed="" data-auto-rotate-slides="10"
+                                                 data-number-per-slide="1">
+                                                <ul class="slides">
+                                                    <li id="testimonials17930" class="testimonial_content">
+                                                        <div class="testimonial_content_inner">
+                                                            <div class="testimonial_image_holder"><img
+                                                                    itemprop="image"
+                                                                    src="https://www.islide.cc/wp-content/uploads/2017/05/liucangshuo.png"/>
+                                                            </div>
+                                                            <div class="testimonial_text_holder">
+                                                                <div class="testimonial_text_inner"
+                                                                     style="color: #606060;"><p
+                                                                        style='color:#606060;'>
+                                                                    “完美的使用體驗，讓簡報瞬間晉升為驚艷簡報，抓住客戶目光，有效提升簡報提案力！”</p>
+                                                                    <p class="testimonial_author"
+                                                                       style="color: #606060;font-weight: 200;color: #cc4a4a;">
+                                                                        劉宗儒, Andy Liu （「臺灣」天長互動創意有限公司 創意總監）</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li id="testimonials17828" class="testimonial_content">
+                                                        <div class="testimonial_content_inner">
+                                                            <div class="testimonial_image_holder"><img
+                                                                    itemprop="image"
+                                                                    src="https://www.islide.cc/wp-content/uploads/2017/04/shaoyunjiao-e1517540089784.png"/>
+                                                            </div>
+                                                            <div class="testimonial_text_holder">
+                                                                <div class="testimonial_text_inner"
+                                                                     style="color: #606060;"><p
+                                                                        style='color:#606060;'>
+                                                                    “从知乎答案，到公众号的文章，我不止一次的向读者推荐过iSlide插件，非常棒，
+                                                                    可以极大的提高做幻灯片的效率。再次诚意推荐。”</p>
+                                                                    <p class="testimonial_author"
+                                                                       style="color: #606060;font-weight: 200;color: #cc4a4a;">
+                                                                        邵云蛟（著有《PPT设计思维》，知乎专栏作者）</p></div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li id="testimonials17826" class="testimonial_content">
+                                                        <div class="testimonial_content_inner">
+                                                            <div class="testimonial_image_holder"><img
+                                                                    itemprop="image"
+                                                                    src="https://www.islide.cc/wp-content/uploads/2016/04/chenkui.png"/>
+                                                            </div>
+                                                            <div class="testimonial_text_holder">
+                                                                <div class="testimonial_text_inner"
+                                                                     style="color: #606060;"><p
+                                                                        style='color:#606060;'>
+                                                                    “锐普所有的演示设计师都用iSlide，因为它可以大大提高我们为客户做PPT的效率。”</p>
+                                                                    <p class="testimonial_author"
+                                                                       style="color: #606060;font-weight: 200;color: #cc4a4a;">
+                                                                        陈魁（锐普PPT创始人）</p></div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li id="testimonials7483" class="testimonial_content">
+                                                        <div class="testimonial_content_inner">
+                                                            <div class="testimonial_image_holder"><img
+                                                                    itemprop="image"
+                                                                    src="https://www.islide.cc/wp-content/uploads/2016/01/awen.png"/>
+                                                            </div>
+                                                            <div class="testimonial_text_holder">
+                                                                <div class="testimonial_text_inner"
+                                                                     style="color: #606060;"><p
+                                                                        style='color:#606060;'>
+                                                                    “本以为自己很懂PPT，直到我遇上了 iSlide ……”</p>
+                                                                    <p class="testimonial_author"
+                                                                       style="color: #606060;font-weight: 200;color: #cc4a4a;">
+                                                                        Simon_阿文（P圈网黄
+                                                                        我懂个P作者，秋叶团队核心成员，微博签约自媒体）</p></div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li id="testimonials17827" class="testimonial_content">
+                                                        <div class="testimonial_content_inner">
+                                                            <div class="testimonial_image_holder"><img
+                                                                    itemprop="image"
+                                                                    src="https://www.islide.cc/wp-content/uploads/2015/04/caojiang.png"/>
+                                                            </div>
+                                                            <div class="testimonial_text_holder">
+                                                                <div class="testimonial_text_inner"
+                                                                     style="color: #606060;"><p
+                                                                        style='color:#606060;'>“专治PPT的不完美。”</p>
+                                                                    <p class="testimonial_author"
+                                                                       style="color: #606060;font-weight: 200;color: #cc4a4a;">
+                                                                        曹将（畅销书《PPT炼成记：高效能PPT达人的10堂必修课》 作者
+                                                                        微博签约自媒体）</p></div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li id="testimonials8670" class="testimonial_content">
+                                                        <div class="testimonial_content_inner">
+                                                            <div class="testimonial_image_holder"><img
+                                                                    itemprop="image"
+                                                                    src="https://www.islide.cc/wp-content/uploads/2014/01/yangxixi1.png"/>
+                                                            </div>
+                                                            <div class="testimonial_text_holder">
+                                                                <div class="testimonial_text_inner"
+                                                                     style="color: #606060;"><p
+                                                                        style='color:#606060;'>
+                                                                    “见过不少PPT插件的人士操作完iSlide表示惊艳了一下！这是一款带有系统思维的插件，适用各种人群：对于小白而言是一个很强大的资源库，对于有一定基础的PPT爱好者而言这个插件起到了很好的功能板块归纳总结，清晰明了，简洁易用，省时高效，大赞！”</p>
+                                                                    <p class="testimonial_author"
+                                                                       style="color: #606060;font-weight: 200;color: #cc4a4a;">
+                                                                        杨细细（厦门特步投资有限公司）</p></div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li id="testimonials7482" class="testimonial_content">
+                                                        <div class="testimonial_content_inner">
+                                                            <div class="testimonial_image_holder"><img
+                                                                    itemprop="image"
+                                                                    src="https://www.islide.cc/wp-content/uploads/2014/01/yinuoqiao.png"/>
+                                                            </div>
+                                                            <div class="testimonial_text_holder">
+                                                                <div class="testimonial_text_inner"
+                                                                     style="color: #606060;"><p
+                                                                        style='color:#606060;'>
+                                                                    “自诩偷懒专业户的我，认为任何机械性的重复都应该去思考简化办法。作为高频率接触PPT的培训师，无论是统一元素，还是快速排版，iSlide插件都帮我节省了宝贵的时间。”</p>
+                                                                    <p class="testimonial_author"
+                                                                       style="color: #606060;font-weight: 200;color: #cc4a4a;">
+                                                                        诺壹乔（舟走工作室创始人，独立培训师，演示顾问）</p></div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li id="testimonials7452" class="testimonial_content">
+                                                        <div class="testimonial_content_inner">
+                                                            <div class="testimonial_image_holder"><img
+                                                                    itemprop="image"
+                                                                    src="https://www.islide.cc/wp-content/uploads/2014/01/jiawenqian.png"/>
+                                                            </div>
+                                                            <div class="testimonial_text_holder">
+                                                                <div class="testimonial_text_inner"
+                                                                     style="color: #606060;"><p
+                                                                        style='color:#606060;'>
+                                                                    “iSlide插件可谓是神器，每个功能在ppt制作中的使用率都非常，尤其是智能图表，修改数据的同时图表会跟着改变，实在是非常惊艳”</p>
+                                                                    <p class="testimonial_author"
+                                                                       style="color: #606060;font-weight: 200;color: #cc4a4a;">
+                                                                        嘉文钱（P圈网红，前 PPmoney运营中心策划主管）</p></div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li id="testimonials545" class="testimonial_content">
+                                                        <div class="testimonial_content_inner">
+                                                            <div class="testimonial_image_holder"><img
+                                                                    itemprop="image"
+                                                                    src="https://www.islide.cc/wp-content/uploads/2013/10/panshi.png"/>
+                                                            </div>
+                                                            <div class="testimonial_text_holder">
+                                                                <div class="testimonial_text_inner"
+                                                                     style="color: #606060;"><p
+                                                                        style='color:#606060;'>
+                                                                    “很喜欢iSlide的图表部分，虽然大多数图表不装插件也可以制作，但是制作门槛高，制作时间长。用iSlide，新手通过几个点击就能做出专业生动的图表，把大量重复性操作的时间节省出来，放在PPT内容的创造与逻辑的梳理上，这正是iSlide的核心价值。”</p>
+                                                                    <p class="testimonial_author"
+                                                                       style="color: #606060;font-weight: 200;color: #cc4a4a;">
+                                                                        璞石</p></div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="separator  transparent   " style="margin-top: 40px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="vc_row wpb_row section vc_row-fluid  image_to_bottom grid_section"
+                     style='background-color:#ffffff;background-image:url(https://www.islide.cc/wp-content/uploads/2019/08/footerimg.png); padding-top:150px; padding-bottom:150px; text-align:center;'>
+                    <div class=" section_inner clearfix">
+                        <div class='section_inner_margin clearfix'>
+                            <div class="  element_from_top">
+                                <div>
+                                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                                        <div class="vc_column-inner">
+                                            <div class="wpb_wrapper">
+                                                <div class="wpb_text_column wpb_content_element  vc_custom_1517541558808">
+                                                    <div class="wpb_wrapper">
+                                                        <h2><span
+                                                                style="color: #ffffff;">只要安装了PowerPoint软件</span>
+                                                        </h2>
+
+                                                    </div>
+                                                </div>
+                                                <div class="separator  transparent   "
+                                                     style="margin-top: 5px;"></div>
+
+                                                <div class="wpb_text_column wpb_content_element ">
+                                                    <div class="wpb_wrapper">
+                                                        <h4><span
+                                                                style="color: #ffffff;">你和PPT高手之间，就只差一个iSlide</span>
+                                                        </h4>
+
+                                                    </div>
+                                                </div>
+                                                <div class="separator  transparent   "
+                                                     style="margin-top: 5px;margin-bottom: 15px;"></div>
+                                                <a itemprop="url" href=""
+                                                   target="_self" class="qbutton  large white default"
+                                                   style="font-weight: 300; ">免费下载</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+#end

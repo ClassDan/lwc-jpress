@@ -1,0 +1,57 @@
+.main-content {
+    position: relative;
+}
+
+.layout-centered .main-content {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: space-around
+}
+
+.user-body .btn-circle {
+    padding: 0;
+    border-radius: 10rem;
+}
+
+.w-400 {
+    width: 400px !important;
+}
+
+.mw-100 {
+    max-width: 100% !important;
+}
+
+.mb-7, .my-7 {
+    margin-bottom: 3rem !important;
+}
+
+.shadow-5 {
+    -webkit-box-shadow: 0 0 45px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 0 45px rgba(0, 0, 0, 0.12);
+}
+
+.p-6 {
+    padding: 2rem !important;
+}
+
+.rounded {
+    border-radius: .25rem !important;
+}
+
+.bg-white {
+    background-color: #fff !important;
+}
+
+.text-center {
+    text-align: center !important
+}
+
+.text-muted {
+    color: #b5b9bf !important;
+}
+
+.small-2 {
+    font-size: .82031rem !important;
+}

@@ -1,0 +1,159 @@
+/*
+Theme Name: Bridge Child
+Theme URI: http://demo.qodeinteractive.com/bridge/
+Description: A child theme of Bridge Theme
+Author: Qode Interactive
+Author URI: http://www.qodethemes.com/
+Version: 1.0.0
+Template: bridge
+*/
+@import url("../bridge/style.css");
+
+*{
+  font-family: "Arial","Microsoft YaHei","é»‘ä½“","å®‹ä½“",sans-serif;
+}
+
+:not(i){
+  font-family: "Arial","Microsoft YaHei","é»‘ä½“","å®‹ä½“",sans-serif!important;
+}
+
+.search_button.search_slides_from_window_top.normal{
+  height: auto;
+}
+.q_counter_holder p.counter_text{font-weight:400;font-size:15px}
+.wrapper{background-color:#ffffff}
+.vc_row.wpb_row.section.vc_row-fluid.grid_section{background:#ffffff}
+.content, .content .container,.full_width{background:#FFFFFF} Â 
+/*è¿™é‡Œæ˜¯æ–°å¢žçš„css*/
+.container {background-color: transparent !important}
+.content .footer_inner .container{background-color:transparent !important}
+select.wpcf7-form-control.wpcf7-select {background-color: #fff;border: 1px solid #d6d6d6}
+input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required {background-color: #fff;border: 1px solid #d6d6d6}
+input.wpcf7-form-control.wpcf7-text{background-color: #fff;border: 1px solid #d6d6d6}
+textarea.wpcf7-form-control.wpcf7-textarea {background-color: #fff;border: 1px solid #d6d6d6}
+/*ä»¥ä¸Š*/
+.carousel-inner .item .image{background-size:auto !important}
+.footer_text>a{color:#8a939d}
+.footer_contact{position:relative;}
+.footer_contact .img{width:40px;height:40px;cursor:pointer;margin-right:20px;opacity:0.8;}
+
+.footer_qrcode_box img{width:120px;height:120px;display:none;position:absolute;left:-140px;top:0px}
+.blog_holder article .post_text h2 .date {
+   display:none
+}
+
+.blog_holder article .post_info .time {
+
+   display:none
+}
+.blog_holder.blog_large_image_with_dividers .post_text_holder .blog_column1{
+  display:none
+}
+.blog_holder article .post_text .post_text_inner {
+    padding-left:0px
+
+}
+.blog_holder.blog_large_image_with_dividers .post_text_holder .blog_column2{
+padding-left:0px
+}
+
+
+.icon_social_holder {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 35px;
+  margin-top: 35px;
+  padding: 35px 0 35px;
+}
+
+.icon_social_holder .qode_share,
+.icon_social_holder .qode_like {
+  display: inline-block;
+  margin: 0;
+}
+
+.icon_social_holder > div {
+  display: inline-block;
+  margin: 0px 25px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.icon_social_holder .social_share_icon,
+.icon_social_holder .qode_icon_printer {
+  display: block;
+  font-size: 27px;
+  margin-bottom: 10px;
+}
+
+.icon_social_holder .qode-like {
+  display: inline-block;
+}
+
+.icon_social_holder .qode-like:before {
+  content: 'W';
+  font-family: "linea-basic-10" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  font-size: 27px;
+  margin-bottom: 15px;
+  display: block;
+  position: relative;
+  top: 5px;
+}
+
+div.icon_social_holder > div.qode_print > a > span.icon-basic-printer.qode_icon_printer:before {
+  font-family: "linea-basic-10" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  font-size: 27px;
+  margin-bottom: 15px;
+  display: block;
+  position: relative;
+  top: 5px;
+}
+
+div.icon_social_holder #wechatshare {
+  margin-left: 20px;
+}
+
+img {
+	image-rendering: -moz-crisp-edges;         /* Firefox */
+   image-rendering:   -o-crisp-edges;         /* Opera */
+   image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+   image-rendering: crisp-edges;
+   -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+}
+
+.post_info {
+    display: none !important;
+}
+
+.kf5-chatSupport-style1{
+  bottom: 135px !important;
+  right: 25px !important;
+}
+.kf5-chatSupport-btn{
+  box-shadow: 0 0 0 0 !important;
+}
+.kf5-chatSupport-btn:hover{
+  transform: scale(1) !important;
+  box-shadow: 0 0px 15px 0 rgba(0,0,0,.24), 0 0px 50px 0 rgba(0,0,0,.19) !important;
+}
+
+footer.uncover {
+	z-index: 9;
+}

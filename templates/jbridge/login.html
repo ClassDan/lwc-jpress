@@ -1,0 +1,53 @@
+#include("./layout.html")
+#@layout()
+
+#define css()
+<link rel="stylesheet" href="css/login.css">
+#end
+
+#define script()
+<script src="js/login.js"></script>
+#end
+
+#define content()
+<main class="main-content">
+    <div class="layout-centered bg-img user-body" style="padding:6rem 0;">
+        <div class="bg-white rounded shadow-5 w-400 mw-100 p-6" style="margin:0 auto;">
+            <h5 class="mb-7">登录</h5>
+            <form action="/user/doLogin" method="post" class="autoAjaxSubmit" data-ok-href="/ucenter">
+
+
+                <div class="form-group">
+                    <input type="text" class="form-control" name="user" placeholder="用户名">
+                </div>
+
+
+                <div class="form-group">
+                    <input type="password" class="form-control" name="pwd" placeholder="密码">
+                </div>
+
+                <!--<div class="form-group flexbox py-3">-->
+                <!--<div class="custom-control custom-checkbox">-->
+                <!--<input type="checkbox" class="custom-control-input" checked>-->
+                <!--<label class="custom-control-label">记住我</label>-->
+                <!--</div>-->
+
+                <!--<a class="text-muted small-2" href="/user/user-recover">忘记密码？</a>-->
+                <!--</div>-->
+
+                <div class="form-group pt-3">
+                    <button class="btn btn-block btn-primary" type="submit">登录</button>
+                </div>
+
+
+            </form>
+
+
+            <!--<div class="divider">或用以下方式登录</div>-->
+            <!---->
+            <!--<hr class="w-10">-->
+            <p class="text-center text-muted small-2">还没有账号吗？ <a href="/user/register">点击这里注册</a></p>
+        </div>
+    </div>
+</main>
+#end
